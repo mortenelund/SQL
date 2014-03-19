@@ -6,7 +6,7 @@ DECLARE
   CURSOR table_cur IS
 	select distinct table_name
   	from dba_tables 
-  	WHERE owner = 'AGRESSO' and last_analyzed<(sysdate-1);
+  	WHERE owner = 'AGRESSO' and last_analyzed<(sysdate);
 BEGIN
   ok := ' er analysert!';
   AntTab := 0;	
